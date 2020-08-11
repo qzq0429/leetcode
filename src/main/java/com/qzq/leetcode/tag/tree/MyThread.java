@@ -5,7 +5,6 @@ import java.util.List;
 
 public class MyThread implements Runnable {
 
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		List<TreeNode> list = new ArrayList<TreeNode>();

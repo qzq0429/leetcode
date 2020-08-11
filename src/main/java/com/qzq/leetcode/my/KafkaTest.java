@@ -44,7 +44,7 @@ public class KafkaTest {
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
  
-        KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+        KafkaProducer<String, String> producer = new KafkaProducer<String, String>(props);
         for (int i = 0; i < 10; i++) {
             producer.send(new ProducerRecord<String, String>("test", Integer.toString(i), Integer.toString(i)));
         }
